@@ -7,6 +7,7 @@ const Popup = () => {
     <>
       <div className="flex justify-center mt-2 text-base">Popup Counter</div>
       <Counter />
+      kjn
     </>
   );
 };
