@@ -1,21 +1,23 @@
-import { Counter } from '../app/features/counter';
+import React, { ReactElement } from 'react';
+import { Container, Select } from '@mantine/core';
 
 const Popup = () => {
-  document.body.className = 'w-[30rem] h-[10rem]';
+  document.body.style.width = '20rem';
+  document.body.style.height = '20rem';
 
   return (
-    <>
-      <div className="flex justify-center mt-2 text-base">
-        <p>どの言語に翻訳しますか？</p>
-        <select name="target_lang">
-          <option value="EN">英語</option>
-          <option value="KO">韓国語</option>
-          <option value="ZH">中国語</option>
-          <option value="JA">日本語</option>
-        </select>
-      </div>
-      {/* <Counter /> */}
-    </>
+    <Container p="xl">
+      <Select
+        label="どの言語に翻訳しますか？"
+        defaultValue="EN"
+        data={[
+          { value: 'EN', label: '英語' },
+          { value: 'KR', label: '韓国語' },
+          { value: 'ZH', label: '中国語' },
+          { value: 'JP', label: '日本語' },
+        ]}
+      />
+    </Container>
   );
 };
 
